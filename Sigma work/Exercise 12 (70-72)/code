@@ -1,0 +1,24 @@
+//  <script>
+//        boxes:function getRandomColor() {
+//   // Generate a random hex color code
+//   return '#' + Math.floor(Math.random()*16777215).toString(16);
+// }
+
+// function assignRandomColors() {
+//   // Get all the boxes
+//   var boxes = document.querySelectorAll('.box');
+
+//   // Loop through each box and assign random color and background color
+//   boxes.forEach(function(box) {
+//     var randomColor = getRandomColor();
+//     var randomBackgroundColor = getRandomColor();
+
+//     // Apply the random colors
+//     box.style.color = randomColor;
+//     box.style.backgroundColor = randomBackgroundColor;
+//   });
+// }
+
+// // Call the function to assign random colors when the page is loaded
+// assignRandomColors();
+//     </script>

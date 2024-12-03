@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transtion property</title>
+    <style>
+        .container{
+            background-color: red;
+            height: 50vh;   
+            width: 40vw;
+        }
+            
+        .box{
+            background-color: aquamarine;
+            height: 5vh;   
+            width: 4vw;
+     /* transition:which element  /time     /type        /dulay*/
+            transition: all         3s      ease-in    0s;
+
+        } 
+        .translate:hover{
+            transform: translatex(10vw) translateY(10vh);
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>

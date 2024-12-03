@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>exercise  76  in js</title>
+</head>
+<body>
+    <script>
+        function loadScript(src){
+            return new Promise((resolve,reject)=>{
+                const script=document.createElement("script");
+                script.src=src;
+                script.onload=()=> resolve();
+                script.onerror=(error)=>reject(error);
+                document.head.appendChild(script)
+            })
+        }
+        loadScript("your_file.js").then(()=> alert(`script loaded successfully")).catch((error)=>alert("Error loading script: ${error}`));
+        async function loadedScriptAsync(src){
+            return new Promise((resolve,reject)=>{
+                const script=document.createElement("script");
+                script.src=src;
+                script.onnload=()=>resolve()
+                script.onerror=(error)=> reject(error);
+                document.head.appendChild(script);
+
+            })
+        }
+
+
+        async function main(){
+            try{
+                await loadedScriptAsync("your_file.js");
+                alert("script loaded successfully");
+                
+            } catch(error){
+                alert(`Error loading script: ${error}`)
+            }
+        }
+        main()
+
+
+        function creatorProMessage(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    const shouldReject=Math.random()<0.5;
+                     if(shouldReject){
+                        reject("Message rejected");
+                    }
+                    else{
+                        resolve("Message Received")
+                    }
+                }, 3000);
+            })
+        }
+    </script>
+</body>
+</html>

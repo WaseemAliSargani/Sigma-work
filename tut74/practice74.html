@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Website</title>
+    <style>
+        body{
+            font-family: arial,sans-serif;
+            margin: 20px;
+        }
+        #bookmarkinput{
+            width: 80%;
+            padding: 8px;
+            margin-right: 10px;
+        }
+        #addBookmarkBtn{
+            padding: 8px;
+            cursor: pointer;
+        }
+        #bookmarlist{
+            margin-top: 20px;
+        }
+        #bookmarkitem{
+            margin-bottom: 10px;
+        }
+        h2{
+            color: black;
+        }
+    </style>
+   
+</head>
+<body>
+    <!-- <button id="first">click here! </button>
+        <button id="second">click now! </button>
+        <button id="third">click quick! </button>
+        <button id="fourth"> are you click!</button>
+    -->
+
+    <h2> Bookmark your favorite Website </h2>
+    <div>
+        <input type="text" id="bookmarkinput" placeholder="Enter website URL">
+        <button id="addBookmarkBtn" onclick="addBookmark()"> Add Bookmark </button>
+    </div>
+    <div id="bookmarklist"> <!---  Bookmarks will be displayed here--->  </div>
+
+
+   <script>
+
+function addBookmark(){
+    const bookmarkinput=document.getElementById("bookmarkinput");
+    const url=bookmarkinput.trim();
+    if(url!==""){
+        let bookmarks=JSON.parse(localStorage.getItem('bookmarks'))  || [];
+        bookmarks.push(url);
+        localStorage.setItem("bookmarks",JSON.stringify(bookmarks));
+        bookmarkinput.value="";
+        displayBookmark();
+    }
+    }
+
+function displayBookmarks(){
+    const bookmarklist=document.getElementById("bookmarklist");
+    bookmarklist.innerHTML="";
+    const bookmarks=JSON.parse(localStorage.getItem('bookamrks')) || [];
+    bookmarks.forEach(url => {
+        const bookmarkitem=document.createComment("div");
+        bookmarkitem.className="bookmarkitem";
+        bookmarkitem.inerHTML= "<a href='${url}' target='_blank'> ${url} </a> "
+        bookmarkitem.appendChild(bookmarkitem);
+    });
+}
+
+displayBookmarks();
+
+
+
+    console.log("hello  world")
+    // let a = document.getElementById("first").addEventListener("click",()=>{
+    //     alert("First alert is ok")
+    // })
+    // let b = document.getElementById("second").addEventListener("click",()=>{
+    //     alert("second  is alert")
+    // })
+    // let c = document.getElementById("third").addEventListener("click",()=>{
+    //     alert("This is the third")
+    // })
+    // let d = document.getElementById("fourth").addEventListener("click",()=>{
+    //     alert("fourth is good")
+    // });
+   </script>
+</body>
+</html>

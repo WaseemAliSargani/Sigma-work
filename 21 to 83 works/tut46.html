@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container{
+            background-color: red;
+            height: 80vh;
+            width: 30vw;
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+            background-color: aqua;
+            border-radius: 20px;
+            padding: 10px;
+     /* animation: name/ duration /timing-type/ delay/ intration-count/ direction/ fill-mode*/
+     animation:     the   5s       ease-in-out   0s     infinite;
+     /* animation: intration-count// means how much time work 1/2/ infinite: means continuesly*/
+        }
+        @keyframes the{
+            0%{
+                background-color: yellow;
+                width: 40px;
+                height: 40px;
+            }
+            20%{
+                background-color: blue;
+                transform: translatex(200px);
+                font-size: 20px;
+                width: 55px;
+                height: 60px;
+            }
+            100%{
+                background-color: green;
+                transform: translatex(400px);
+                font-size: 30px;
+                width: 85px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> Box </div>
+    </div>
+</body>
+</html>

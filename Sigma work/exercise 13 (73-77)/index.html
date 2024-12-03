@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise to website builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+
+        }
+        #bx{
+            background-color: blue;
+            color:white;
+            margin-top: 100px;
+            margin-left: 100px;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <button id="bx" onClick="card()"> Click here! </button>
+    </div>
+
+    <script>
+        console.log("hello world");
+
+        function card(title, cname, views, month, duration, thumbnail) {
+            var title = document.createElement("div")
+            title.innerHTML = "Installing VS Code & How Websites Works| Sigma Web development Course ";
+            title.setAttribute("class", "title")
+            document.querySelector(".container").append(title);
+            title.style.position = "absolute";
+            title.style.fontSize = "24px";
+            title.style.position = "absolute";
+            title.style.top = "9px";
+            title.style.marginLeft = "189px";
+
+
+
+
+            var cname = document.createElement("div")
+            cname.innerHTML = "CodeWithWasseem ";
+            cname.setAttribute("class", "cname")
+            document.querySelector(".container").append(cname)
+            cname.style.marginLeft = "38px";
+            cname.style.position = "relative";
+            cname.style.top = "22px";
+
+
+
+            var views = document.createElement("div")
+            views.innerHTML = " 58k views ";
+            views.setAttribute("class", "views")
+            document.querySelector(".container").append(views)
+            views.style.position = "relative";
+            views.style.top = "22px";
+            views.style.left = "63px";
+
+
+
+
+            var month = document.createElement("div")
+            month.innerHTML = " 2 month ago ";
+            month.setAttribute("class", "month")
+            document.querySelector(".container").append(month)
+            month.style.position = "relative";
+            month.style.top = "22px";
+            month.style.left = "128px";
+
+
+            var duration = document.createElement("div")
+            duration.innerHTML = "20:45 ";
+            duration.setAttribute("class", "duration")
+            document.querySelector(".container").append(duration);
+            duration.style.position = "absolute";
+            duration.style.top = "83px"
+            duration.style.marginLeft = "117px";
+
+
+
+
+
+            var thumbnail = document.createElement("img")
+            thumbnail.innerHTML = "";
+            thumbnail.setAttribute("id", "thumbnail")
+            document.querySelector(".container").prepend(thumbnail)
+            thumbnail.src = "pic.jpg";
+            thumbnail.alt = "pic";
+            thumbnail.setAttribute("width", "167");
+            thumbnail.setAttribute("height", "108");
+            thumbnail.style.borderRadius = "20px";
+            thumbnail.style.marginLeft = "1px";
+
+
+
+            cont = document.querySelector(".container");
+            cont.style.display = "flex";
+            cont.style.position = "relative";
+            cont.style.marginTop = "70px";
+            cont.style.borderRadius = "21px";
+            cont.style.height = "110px";
+            cont.style.alignItems = "center";
+            cont.style.backgroundColor = "rgb(0 0 0 / 83%)";
+            cont.style.width = "70vw";
+            cont.style.margin = "auto";
+            cont.style.flexDirection = "row";
+            cont.style.top = "70px";
+
+
+
+
+
+
+        }
+      
+        // card()
+     
+
+        
+
+
+    </script>
+</body>
+
+</html>

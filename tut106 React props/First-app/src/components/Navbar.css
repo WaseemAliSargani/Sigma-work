@@ -1,0 +1,17 @@
+nav{
+    background-color: gray;
+    display: flex;
+    padding: 20px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 38px;
+}
+li{
+    padding: 10px;
+}
+li:hover{
+    background-color: white;
+    border-radius: 17px;
+}

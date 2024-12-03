@@ -1,0 +1,37 @@
+
+<body>
+    <script>
+       const delay=(ms)=>
+       new Promise(resolve=> setTimeout(resolve,ms));
+
+       const simulateHacking=async()=>{
+
+        const message=["Initializing Hacking","Reading your files","Password files detected","Sending all passwords and personal fiies to server","Cleaning up"];
+
+        for(let i = 0; i < message.length; i++){
+            await typeMessage(message[i])
+            await  delay(getRandomDelay())
+        }
+       }
+       const typeMessage=async(message)=>{
+        const textElement=document.body;
+
+        for(let i =0; i<=message.length; i++){
+            textElement.innerText=message.substring(0,i);
+            await delay(150);
+        }
+        await blinkDots();
+       };
+       const blinkDots=async()=>{
+        const textElement=document.body;
+        for(let i = 0; i<3; i++){
+            textElement.innerText+=".";
+            await delay(500);
+        }
+       }
+       const getRandomDelay=()=>Math.floor(Math.random()*7000)+1000;
+       simulateHacking();
+
+    </script>
+</body>
+</html>

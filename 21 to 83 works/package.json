@@ -1,0 +1,15 @@
+{
+  "name": "sigma-work",
+  "version": "1.0.0",
+  "description": "spotify clone for my app",
+  "main": "tut85",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "spotify",
+    "Music"
+  ],
+  "author": "Waseem",
+  "license": "ISC"
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Transforms master-class</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid  black;
+            /*  1. transform: rotate(0.25turn); 0.25 means 90deg means 1 time round /rotate 1/4*/
+            /* transform: rotate(0.5turn);  0.5 means 180deg means 2 time round /rotate 2/4*/
+            /* transform: rotate(0.75turn); 0.75 means 270deg means 3 time round /rotate 3/4*/
+            /* transform: rotate(1turn);    1 means 360deg means no rotate same position 4/4*/
+
+            /* 2. scale means how much time element grown/big if 10px then scale(2) means 20px */
+            /* transform: scale(2); */
+
+            /* transform: scaley(2); means 2 time big up to down*/
+            /*  transform: scalex(3); means 3 time big left to right*/
+
+            /* 3. transform: skewy(10deg); means kisine khicha hai up to down */
+            /* transform: skewx(10deg); means kisine khicha hai left to right */
+
+
+            /* transform: translate(100px);means it go away 100px from left-side to right-side */
+            /* transform: translatey(100px); means it go away 100px from  upside to downside */
+            
+            /* transform: translatey(100px,100px); it means away both side away in center */
+
+            /* it is shortcut of all transform properties */
+            /* transform: translate(20px) scalex(1.5) skew(20deg); */
+        }
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid  purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is the box
+        </div>
+    </div>
+</body>
+</html>

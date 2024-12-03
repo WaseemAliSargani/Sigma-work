@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting by ids-classes and more in JS</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="first">box1</div>
+        <div class="box" id="second">box2</div>
+        <div class="box" id="third">box3</div>
+        <div class="box" id="fourth">box4</div>
+        <div class="box" id="fiveth">box5</div>
+    </div>
+    <script>
+
+
+        let boxes = document.getElementsByClassName('box');
+        /*class selector:  Return element that have the given css class  */
+        boxes[0].style.backgroundColor="red"
+
+        document.getElementById("second").style.backgroundColor="green";
+        /* Id selector: This method is used to get the element with a given "id" attribut */
+
+        document.querySelectorAll(".box").forEach(a=>{
+            a.style.color="red"
+            /* querySelectorAll: Return all element inside an element matching the given css selector */
+        });
+
+        document.querySelector(".box").style.backgroundColor="brown"
+        /* querySelector: Return the first elem for the given CSS selector   */
+
+
+      
+
+        
+        
+        
+    </script>
+</body>
+</html>

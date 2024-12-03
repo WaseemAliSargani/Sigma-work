@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Job Interview Question for JavaScript </title>
+</head>
+
+<body>
+
+
+    <script>
+        /*Q1. the Magicla sorting hat: Imagine you are creating a magical sorting hat for a wizard scholl. implemenet a javaScript functionn that takes an array of students names and assigns them to one of the four houses (GryFinder (length less than 6). Mufflepuff(length less than 8). Ravanclaw(lenght less than 12). or slytherin(length greater than or equal to 12)) based on the length of thier manes.  */
+
+        let students = ["waseem", "zakir ", "shakeel ", "sharry ", "yaseenAliShaikh ", "irfan", "farhan ", "raheel ", "awaise ", "aliChandio ", "Adnan"]
+
+        let houses = []
+
+        for (const student of students) {
+            if (student.length < 6) {
+                houses.push("first")
+            }
+            else if (student.length < 8) {
+                houses.push("second")
+            }
+            else if (student.length < 12) {
+                houses.push("third")
+            }
+            else {
+                houses.push("fourth")
+            }
+        }
+        console.log(houses)
+
+        /*Q2. Create a password validator at least 8 characters and contains both uppercase and lowercase and includes at least one digit */
+        
+        function isValidPassword(password) {
+    // Check length
+    if (password.length < 8) {
+        return false;
+    }
+
+    // Check for at least one uppercase letter
+    if (!/[A-Z]/.test(password)) {
+        return false;
+    }
+
+    // Check for at least one lowercase letter
+    if (!/[a-z]/.test(password)) {
+        return false;
+    }
+
+    // Check for at least one digit
+    if (!/\d/.test(password)) {
+        return false;
+    }
+
+    // If all conditions are met, the password is valid
+    return true;
+}
+
+// Example usage:
+let talo = prompt("Enter your password: ");
+if (isValidPassword(talo)) {
+    alert(`Conform your Password  "${talo}"`);
+} else {
+    alert("at least one Uppercase one Lowecase and one Digit")
+}
+
+        
+
+
+
+    </script>
+</body>
+
+</html>

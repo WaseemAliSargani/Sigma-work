@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Bubbling setInterval setTimeout in JS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">hey i am a box</div>
+    </div>
+    <button id="btn">change content</button>
+
+
+    <script>
+
+        // click: click then box content will be show 
+        let btn = document.getElementById("btn")
+        btn.addEventListener("click",()=>{
+            document.querySelector(".box").innerHTML="<b> hey you are clicked now what you want"
+        })
+
+        /// contextmenu:  if rightClick then show alert
+        btn.addEventListener("contextmenu",()=>{
+            alert("Don't hack us why right click")
+        })
+
+        // keydown:  press any key then it will how on console
+        document.addEventListener("keydown",(e)=>{
+            console.log(e.key, e.keyCode)
+        })
+    </script>
+</body>
+</html>

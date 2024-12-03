@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS specificity-cascade </title>
+    <style>
+        /* the specificity marks means which if come first */
+
+        /* universal selector marks is 0 % */
+        *{
+            color: orange;
+        }
+        /* element selector marks is 1 % */
+        h1{         
+            color: red;
+        }
+        /* class selector marks is 10  % */
+        .yellow{
+            color: yellow;
+        }
+        /* class selector same marks is 10 % but it come in last so it is run*/
+        .cred{
+            color: blue;
+        }
+        /* id selector marks is 100 % */
+        #ss{
+            color: aqua;
+        }
+        
+        /* inline selector marks is 1000 % */ 
+
+        
+        /* !important is marks 1000000 % it is more then all selector */
+        h1{
+            color: purple !important;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred purple" id="ss" style="color: green;"> CSS specificity </h1>
+    </div>
+</body>
+</html>

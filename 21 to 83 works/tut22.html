@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing units</title>
+    <style>
+        /* sizing units in css */
+        /* 1. px means piexel no means */
+        /* 2. em means multiply by parents*/
+        /* 3. rem multiply by html */   
+        /* 4. vh means height persentage 10vh means 10% height of web page*/
+        /* 5. vw means width persentage 20vw means 20* width of web page*/
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 70vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            height: 80vh;
+            margin: 23px auto;
+           font-size: 10px;
+            background-color: aquamarine
+        }
+        .container p{
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is the box
+    </div>
+    <div class="container">
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum officiis est eos, repudiandae doloremque consequuntur! Perferendis quaerat animi magni voluptatum suscipit? In maiores eum esse assumenda libero consequatur ut deserunt impedit tempora cupiditate aliquam, officiis nesciunt, voluptas porro. Debitis explicabo velit error officiis, officia, beatae minima molestias est rerum optio in nihil cum, quod sed?
+    </p>
+    </div>
+</body>
+</html>

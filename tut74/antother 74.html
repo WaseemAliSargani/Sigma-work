@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>another 74 for </title>
+    <style>
+        .child {
+            background-color: gray;
+            border: 2px solid black;
+            padding: 35px;
+            margin: 35px;
+            cursor: pointer;
+        }
+
+        .childcontainer {
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .container {
+            background-color: rgb(73, 73, 53);
+            padding: 14px;
+            margin: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                i am a child
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation() /*stopPropagation: stop bubling: it NOT run for another Eventlistner it run itself only*/
+            alert("child was clicked")
+        });
+
+        document.querySelector(".childcontainer").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("childcontainer was clicked")
+        });
+
+        document.querySelector(".container").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("container was clicked")
+        });
+
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random() * 25699)
+        };
+
+       let b = setInterval(() => {
+            document.querySelector(".childcontainer").style.background = getRandomColor()
+        }, 100);
+        let a =setInterval(() => {
+            document.querySelector(".container").style.background = getRandomColor()
+        }, 100);
+        let c = setInterval(() => {
+            document.querySelector(".child").style.background = getRandomColor()
+        }, 300);
+        console.log(a)  // code 2
+        console.log(b)  // code 1
+        console.log(c)  // code 3
+
+
+        /* clearTimeout:   and     clearInterval:  it is use to don't excute the  function
+        2.clearIntervl     This function will be not excute 
+        
+        */
+
+
+
+    </script>
+
+</body>
+
+</html>

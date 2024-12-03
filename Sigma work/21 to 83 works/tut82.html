@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JavaSript</title>
+</head>
+<body>
+    
+    <script>
+        async function sleep(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    resolve(45)
+                }, 1000);
+            })
+        }
+        function sum(a,b,c){
+            return a+b+c
+        }
+        (async function main(){
+            
+            // let a = await sleep()
+            // console.log(a)
+            // let b = await sleep()
+            // console.log(b)
+
+                /// it means x = 1:  y = 5: and other is not defiene so now other is undefined
+            // let [x, y] = [1,5,5,6] 
+            // console.log(x,y)
+
+                    //// but here is other number on in "the" which mneans now many number value  is "the"
+            // let [x, y,...the] = [1,5,5,6]
+            // console.log(x,y,the)
+
+
+            let obj={
+                a: 5,
+                b:6,
+            }
+             
+            let {a,b}=obj
+            console.log(a,b)
+
+
+
+            let  arr=[1,4,6,4,5,6]
+            // console.log(arr[0] + arr[1] + arr[2])   /// Normal and Old way 
+            console.log(sum(...arr)) /// MOdern and Best way
+
+            /* this is the "quick quiz" i have to show the value of x and also y 
+            let x="the"
+            let y = "no"
+            let c = {x,y}
+            console.log(x[0]+x[1]+x[2]   ,y[0]+y[1], )   now this show the value of both that is "the no" */
+        })()
+    </script>
+</body>
+</html>

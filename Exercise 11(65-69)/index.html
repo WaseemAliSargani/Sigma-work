@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question and solution</title>
+  </head>
+  <body>
+    <script>
+       
+      let a = 6;
+      function the(waseem){
+        let arr=Array.from(Array(waseem+1).keys());
+        let c = arr.slice(1,).reduce((a,b)=>{ 
+          return a*b 
+        })
+        console.log(c)
+      }
+      the(a)
+    </script>
+  </body>
+</html>

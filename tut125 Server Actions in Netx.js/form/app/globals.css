@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: black;
+  color: white;
+}
+.btn{
+  background-color: red;
+  padding: 9px;
+  border-radius: 19px;
+}

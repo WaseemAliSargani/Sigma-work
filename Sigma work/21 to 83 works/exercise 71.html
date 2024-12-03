@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise to tut71</title>
+    <style>
+        .box{
+            border: 2px solid black ;
+            margin: 5px;
+            padding: 5px;
+            background-color: aqua;
+
+        }
+        .container{
+            background-color: gray;
+            width: 600px;
+
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box first">  this is the first div</div>
+        <div class="box second"> and this is the second div</div>
+    </div>
+    <script>
+        let a = document.createElement("div")
+        a.innerHTML= "<p> this is the paragraph </p>"
+        document.querySelector(".first").replaceWith(a)
+
+        let b = document.querySelector(".container")
+        b.insertAdjacentHTML("beforeend","<h1> This is the adjacentHTML </h1>")
+        
+    </script>
+</body>
+</html>

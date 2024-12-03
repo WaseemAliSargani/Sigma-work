@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: black;
+  color: white;
+}
+.link {
+  color: #2d2dff;
+  
+}
+
+.container {
+  text-align: center;
+  margin-top: 92px;
+}
+
+.h2 {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+}
+
+.para {
+  margin-top: 20px;
+  color: gray;
+}
+
+.error{
+  color: red;
+}
